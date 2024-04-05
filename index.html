@@ -1,1 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DexGrasp-Diffusion: Diffusion-based Unified Functional Grasp Synthesis Pipeline for Multi-Dexterous Robotic Hands </title>
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
+  <!-- <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <!-- <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div> -->
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">DexGrasp-Diffusion: Diffusion-based Unified Functional Grasp Synthesis Pipeline for Multi-Dexterous Robotic Hands </h1>
+          <div class="is-size-5 publication-authors">
+         
+            <span class="author-block">
+              Zhengshen Zhang<sup>1</sup>,   <span class="author-block">
+              <a href="https://zray26.github.io">Lei Zhou</a><sup>1</sup>,</span>
+            <span class="author-block">
+              Chenchen Liu<sup>1</sup>,</span>
+            </span>
+            <span class="author-block">
+              Zhiyang Liu<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              Chengran Yuan<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              Sheng Guo<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              Ruiteng Zhao<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              Marcelo H. Ang Jr.<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              Francis EH Tay<sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>National University of Singapore</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The versatility and adaptability of human grasping catalyze advancing dexterous robotic manipulation. While significant strides have been made in dexterous grasp generation, current research endeavors pivot towards optimizing object manipulation while ensuring functional integrity, emphasizing the synthesis of functional grasps following desired affordance instructions. This paper addresses the challenge of synthesizing functional grasps tailored to diverse dexterous robotic hands by proposing DexGrasp-Diffusion, an end-to-end modularized diffusion-based pipeline. DexGrasp-Diffusion integrates MultiHandDiffuser, a novel unified data-driven diffusion model for multi-dexterous hands grasp estimation, with DexDiscriminator, which employs a Physics Discriminator and a Functional Discriminator with open-vocabulary setting to filter physically plausible functional grasps based on object affordances. The experimental evaluation conducted on the MultiDex dataset provides substantiating evidence supporting the superior performance of MultiHandDiffuser over the baseline model in terms of success rate, grasp diversity, and collision depth. Moreover, we demonstrate the capacity of DexGrasp-Diffusion to reliably generate functional grasps for household objects aligned with specific affordance instructions.
+          </p>
+        
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <!-- <iframe src="https://youtu.be/9w-tQ6pxft0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+          <video src="./static/videos/supplementary_video.mp4" autoplay controls></video>
+          <!-- <iframe width="420" height="315" allow="autoplay ; encrypted-media" src="https://www.youtube.com/embed/9w-tQ6pxft0" ></iframe> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+<section class="pipeline">
+  <div class="container is-max-desktop">
+    <div class="hero-body is-centered has-text-centered">
+      <h2 class="title is-3">Pipeline</h2>
+      <!-- <img id="teaser" width=100%> -->
+      <img src="./static/images/pipeline.png"  width=100%>
+      <!-- </img> -->
+      <h2 class="subtitle has-text-centered">
+        Overview of the proposed pipeline. <b>Stage I</b>:
+ Given a monocular RGB-D video, object masks are segmented using a <i>Video-segmentation Module</i>. Subsequently, feature matching is performed in the <i>Object Pose Tracker and Mesh Generator module</i> simultaneously track object pose and reconstruct object mesh. Keyframes with informative historical observations are stored in the memory pool to facilitate pose tracking in both stages. <b>Stage II:</b>  In testing, given an RGB-D image, the masks of the objects in the workspace are segmented out and the object pose is estimated by taking the <i>Keyframe Memory Pool</i> as a reference. Subsequently, the reconstructed meshes are transformed into camera coordinates with the estimated object pose. Taking this reconstructed scene point cloud, grasp generation is performed to generate the top k grasp poses for real-world experiments. The dotted lines represent the supplementation of historical information.
+      </h2>
+    </div>
+  </div>
+</section>
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Denosing Process</h2>
+        <div class="publication-video">
+          <!-- <iframe src="https://youtu.be/9w-tQ6pxft0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+          <video src="./static/videos/Denoising.mp4" autoplay controls></video>
+          <!-- <iframe width="420" height="315" allow="autoplay ; encrypted-media" src="https://www.youtube.com/embed/9w-tQ6pxft0" ></iframe> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- <div class="columns is-centered has-text-centered">
+  <div style="background-color: white; padding: 15px;">
+    <h3 style="border-bottom: 1px solid; margin: 0 0 8px 0; font-size: 18px; font-weight: 600;">Tok k Grasp Poses</h3>
+  <img src='./static/images/ICRA2024_results.drawio.png' width=80%>
+  </div>
+</div> -->
+
+
+<!-- 
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre>
+  </div>
+</section> -->
+
+<script type="text/javascript">
+  $(function (){
+  $(".secdiv").load("./static/images/contactdb+apple+sample-0.html");
+ });
+ </script>
+
+<include src="./static/images/contactdb+apple+sample-0.html"></include>
+
+<head>
+  <link rel="import" href="./static/images/contactdb+apple+sample-0.html">
+</head>
+
+
+<head> 
+  <title>Embedded Web Page</title> 
+</head> 
+<body> 
+ 
+<h2>Displaying Another Web Page</h2> 
+ 
+<iframe src="./static/images/contactdb+apple+sample-0.html" width="400" height="400" title="Embedded Page"></iframe> 
+<iframe src="./static/images/contactdb+apple+sample-0.html" width="400" height="400" title="Embedded Page"></iframe> 
+</body> 
+
+<!-- <head> 
+  <script src="jquery.js"></script> 
+  <script> 
+  $(function(){
+    $("#includedContent").load("./static/images/contactdb+apple+sample-0.html"); 
+  });
+  </script> 
+</head>  -->
+
+
+<footer class="footer">
+  <!-- <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div> -->
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This webpage template was inspired from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
