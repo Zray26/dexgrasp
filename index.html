@@ -167,8 +167,7 @@
       <img src="./static/images/pipeline.png"  width=100%>
       <!-- </img> -->
       <h2 class="subtitle has-text-centered">
-        Overview of the proposed pipeline. <b>Stage I</b>:
- Given a monocular RGB-D video, object masks are segmented using a <i>Video-segmentation Module</i>. Subsequently, feature matching is performed in the <i>Object Pose Tracker and Mesh Generator module</i> simultaneously track object pose and reconstruct object mesh. Keyframes with informative historical observations are stored in the memory pool to facilitate pose tracking in both stages. <b>Stage II:</b>  In testing, given an RGB-D image, the masks of the objects in the workspace are segmented out and the object pose is estimated by taking the <i>Keyframe Memory Pool</i> as a reference. Subsequently, the reconstructed meshes are transformed into camera coordinates with the estimated object pose. Taking this reconstructed scene point cloud, grasp generation is performed to generate the top k grasp poses for real-world experiments. The dotted lines represent the supplementation of historical information.
+    
       </h2>
     </div>
   </div>
@@ -210,19 +209,19 @@
   </div>
 </section> -->
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
   $(function (){
   $(".secdiv").load("./static/images/contactdb+apple+sample-0.html");
  });
  </script>
 
-<include src="./static/images/contactdb+apple+sample-0.html"></include>
+<include src="./static/images/contactdb+apple+sample-0.html"></include> -->
 
-<head>
+<!-- <head>
   <link rel="import" href="./static/images/contactdb+apple+sample-0.html">
-</head>
+</head> -->
 
-
+<!-- 
 <head> 
   <title>Embedded Web Page</title> 
 </head> 
@@ -230,9 +229,12 @@
  
 <h2>Displaying Another Web Page</h2> 
  
-<iframe src="./static/images/contactdb+apple+sample-0.html" width="400" height="400" title="Embedded Page"></iframe> 
-<iframe src="./static/images/contactdb+apple+sample-0.html" width="400" height="400" title="Embedded Page"></iframe> 
-</body> 
+<iframe src="./static/html/allegro/contactdb+apple+sample-5_step-1000.html" width="400" height="400" title="Embedded Page"></iframe> 
+<iframe src="./static/html/allegro/contactdb+camera+sample-11_step-1000.html" width="400" height="400" title="Embedded Page"></iframe> 
+<iframe src="./static/html/allegro/contactdb+hammer+sample-17_step-1000.html" width="400" height="400" title="Embedded Page"></iframe> 
+<iframe src="./static/html/allegro/ycb+potted_meat_can+sample-9_step-1000.html" width="400" height="400" title="Embedded Page"></iframe> 
+<iframe src="./static/html/allegro/ycb+tomato_soup_can+sample-6_step-1000.html" width="400" height="400" title="Embedded Page"></iframe> 
+</body>  -->
 
 <!-- <head> 
   <script src="jquery.js"></script> 
