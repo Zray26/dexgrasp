@@ -167,7 +167,13 @@
       <img src="./static/images/pipeline.png"  width=100%>
       <!-- </img> -->
       <h2 class="subtitle has-text-centered">
-    
+      </h2>
+
+      <h2 class="subtitle has-text-centered">
+        <b>Training: </b> Given a ground truth hand pose h<sub>0</sub> in the dataset, Gaussian noise &#949 is gradually added to h<sub>0</sub> to obtain a series of intermediate hand poses h<sub>t</sub>. Conditioned on various conditions, including time step, object point cloud, finger padding mask, hand class, and hand point cloud, the diffusion model predicts noise added to the h<sub>0</sub>.
+      
+        <b>Testing:</b> Given a noisy hand pose sampled from a standard multivariate Gaussian distribution h<sub>T</sub> &#126 <i>N(0,I)</i>  as the initial state, it corrects h<sub>t</sub> to less noisy pose h<sub>t-1</sub> at each time step. Subsequently, two discriminators are applied to filter physically feasible and functional grasps.
+ 
       </h2>
     </div>
   </div>
