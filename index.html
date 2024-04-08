@@ -39,6 +39,89 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+
+  <style>
+    html {
+      height: 100%;
+      background-color: #fafafa;
+    }
+
+    body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      background-color: #fafafa;
+    }
+
+    #app {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    hr {
+      background-color: #f1f1f1;
+    }
+
+    .table th {
+      padding: 0.2em 0.2em 0 0.2em;
+      width: 50%;
+    }
+
+    .table td {
+      padding: 0.25em;
+      width: 50%;
+    }
+
+    .content-block {
+      padding: 0 6px;
+    }
+
+    .title {
+      font-size: 32px;
+      padding-top: 32px;
+    }
+
+    .publisher {
+      margin-bottom: 1rem;
+    }
+
+    .sub-title {
+      font-size: 26px;
+      padding-bottom: 16px;
+    }
+
+    .subsub-title {
+      font-size: 20px;
+      padding-bottom: 8px;
+    }
+
+    .author {
+      font-size: 16px;
+    }
+
+    .task {
+      padding-bottom: 12px;
+    }
+
+    @media screen and (min-width: 880px) {
+      .is-840px {
+        flex: none;
+        width: 840px;
+      }
+    }
+    @media screen and (max-width: 879px) {
+      .is-100per {
+        flex: none;
+        width: 100%;
+      }
+    }
+  </style>
+
+
+
+
 </head>
 <body>
 
@@ -255,67 +338,6 @@
 </head>  -->
 
 
-
-<section class="functional">
-  <div class="container is-max-desktop">
-    <div class="hero-body is-centered has-text-centered">
-      <h2 class="title is-3">Functional Discriminator</h2>
-      <!-- <img id="teaser" width=100%> -->
-      <img src="./static/images/functional.png"  width=100%>
-      <!-- </img> -->
-      <h2 class="subtitle has-text-centered">
-        Given an open-vocabulary affordance label, the functional discriminator implements point cloud segmentation. Green points represent region where the robot can grasp the object without impeding its intended functionality.
-      </h2>
-    </div>
-  </div>
-</section>
-<div w3-include-html="./static/html/allegro/contactdb+apple+sample-5_step-1000.html"></div>
-<ui:include src="./static/html/allegro/contactdb+apple+sample-5_step-1000.html" />
-
-<html> 
-  <head> 
-    <script src="jquery.js"></script> 
-    <script> 
-    $(function(){
-      $("#includedContent").load("./static/html/allegro/contactdb+apple+sample-5_step-1000.html"); 
-    });
-    </script> 
-  </head> 
-
-  <body> 
-     <div id="includedContent"></div>
-  </body> 
-</html>
-
-<footer class="footer">
-  <!-- <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div> -->
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This webpage template was inspired from <a
-              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-</body>
-
-
-
-<!--          
 <div class="task">
   <div class="columns is-centered" style="position: relative;">
     <div style="position: absolute; left: 3%; top: 3%;">
@@ -345,7 +367,59 @@
   </div>
   <p style="margin: 0 1.5em; font-size: 0.8em; text-align:justify;">Note: Click the select dropdown to select a object and a pre-sampled grasp for result visualization. Drag to move your view around.</p>
 </div>
-</div> -->
+
+
+
+<section class="functional">
+  <div class="container is-max-desktop">
+    <div class="hero-body is-centered has-text-centered">
+      <h2 class="title is-3">Functional Discriminator</h2>
+      <!-- <img id="teaser" width=100%> -->
+      <img src="./static/images/functional.png"  width=100%>
+      <!-- </img> -->
+      <h2 class="subtitle has-text-centered">
+        Given an open-vocabulary affordance label, the functional discriminator implements point cloud segmentation. Green points represent region where the robot can grasp the object without impeding its intended functionality.
+      </h2>
+    </div>
+  </div>
+</section>
+<div w3-include-html="./static/html/allegro/contactdb+apple+sample-5_step-1000.html"></div>
+<ui:include src="./static/html/allegro/contactdb+apple+sample-5_step-1000.html" />
+
+
+<footer class="footer">
+  <!-- <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div> -->
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This webpage template was inspired from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+</body>
+
+
+
+         
 
 
 
@@ -405,7 +479,7 @@
       return
     }
     scene2.remove(model2)
-    // document.querySelector('#grasp_loading').innerHTML = `<img src="./assets/icons/loading.svg" width="48" height="48">`
+    document.querySelector('#grasp_loading').innerHTML = `<img src="./static/icons/loading.svg" width="48" height="48">`
     // let assetUrl = new URL(`./assets/grasp_generation_color/${objSel.value}/${samSel.value}.glb`, import.meta.url)
     // let assetUrl = new URL(`./static/html/${objSel.value}/${samSel.value}.html`, import.meta.url)
     let assetUrl = new URL(`./static/html/allegro/grasp_0.html`, import.meta.url)
