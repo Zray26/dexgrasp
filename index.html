@@ -408,7 +408,9 @@
     scene2.remove(model2)
     document.querySelector('#grasp_loading').innerHTML = `<img src="./assets/icons/loading.svg" width="48" height="48">`
     // let assetUrl = new URL(`./assets/grasp_generation_color/${objSel.value}/${samSel.value}.glb`, import.meta.url)
-    let assetUrl = new URL(`./static/html/${objSel.value}/${samSel.value}.html`, import.meta.url)
+    // let assetUrl = new URL(`./static/html/${objSel.value}/${samSel.value}.html`, import.meta.url)
+    let assetUrl = new URL(`./static/html/allegro/grasp_0.html`, import.meta.url)
+    
     // let assetUrl = new URL(`./static/html/allegro/contactdb+apple+sample-5_step-1000.html`, import.meta.url)
     assetLoader2.load(assetUrl.href, gltf => {
       model2 = gltf.scene
