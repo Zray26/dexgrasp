@@ -322,16 +322,11 @@
       <span style="font-size: 0.8em;">Object </span>
       <div class="select is-small">
         <select id="objectSelector">
-          <option>contactdb+apple</option>
-          <option>contactdb+camera</option>
-          <option>contactdb+cylinder_medium</option>
-          <option>contactdb+door_knob</option>
-          <option>contactdb+rubber_duck</option>
-          <option>contactdb+water_bottle</option>
-          <option>ycb+baseball</option>
-          <option>ycb+pear</option>
-          <option>ycb+potted_meat_can</option>
-          <option>ycb+tomato_soup_can</option>
+          <option>allegro</option>
+          <option>barrett</option>
+          <option>ezgripper</option>
+          <option>robotiq_3finger</option>
+          <option>shadowhand</option>
         </select>
       </div>
       &nbsp;&nbsp;&nbsp;
@@ -343,11 +338,6 @@
           <option>grasp_2</option>
           <option>grasp_3</option>
           <option>grasp_4</option>
-          <option>grasp_5</option>
-          <option>grasp_6</option>
-          <option>grasp_7</option>
-          <option>grasp_8</option>
-          <option>grasp_9</option>
         </select>
       </div>
     </div>
@@ -408,7 +398,7 @@
 
   const objSel = document.querySelector('#objectSelector')
   const samSel = document.querySelector('#sampleSelector')
-  objSel.value = 'contactdb+apple'
+  objSel.value = 'allegro'
   samSel.value = 'grasp_0'
 
   function load_model2(e) {
@@ -418,8 +408,8 @@
     scene2.remove(model2)
     document.querySelector('#grasp_loading').innerHTML = `<img src="./assets/icons/loading.svg" width="48" height="48">`
     // let assetUrl = new URL(`./assets/grasp_generation_color/${objSel.value}/${samSel.value}.glb`, import.meta.url)
-    // let assetUrl = new URL(`./assets/grasp_generation_color/${objSel.value}/${samSel.value}.html`, import.meta.url)
-    let assetUrl = new URL(`./static/html/allegro/contactdb+apple+sample-5_step-1000.html`, import.meta.url)
+    let assetUrl = new URL(`./static/html/${objSel.value}/${samSel.value}.html`, import.meta.url)
+    // let assetUrl = new URL(`./static/html/allegro/contactdb+apple+sample-5_step-1000.html`, import.meta.url)
     assetLoader2.load(assetUrl.href, gltf => {
       model2 = gltf.scene
       scene2.add(model2)
