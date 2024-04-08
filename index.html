@@ -315,6 +315,50 @@
 
 
 
+         
+<div class="task">
+  <div class="columns is-centered" style="position: relative;">
+    <div style="position: absolute; left: 3%; top: 3%;">
+      <span style="font-size: 0.8em;">Object </span>
+      <div class="select is-small">
+        <select id="objectSelector">
+          <option>contactdb+apple</option>
+          <option>contactdb+camera</option>
+          <option>contactdb+cylinder_medium</option>
+          <option>contactdb+door_knob</option>
+          <option>contactdb+rubber_duck</option>
+          <option>contactdb+water_bottle</option>
+          <option>ycb+baseball</option>
+          <option>ycb+pear</option>
+          <option>ycb+potted_meat_can</option>
+          <option>ycb+tomato_soup_can</option>
+        </select>
+      </div>
+      &nbsp;&nbsp;&nbsp;
+      <span style="font-size: 0.8em;">Sample </span>
+      <div class="select is-small">
+        <select id="sampleSelector">
+          <option>grasp_0</option>
+          <option>grasp_1</option>
+          <option>grasp_2</option>
+          <option>grasp_3</option>
+          <option>grasp_4</option>
+          <option>grasp_5</option>
+          <option>grasp_6</option>
+          <option>grasp_7</option>
+          <option>grasp_8</option>
+          <option>grasp_9</option>
+        </select>
+      </div>
+    </div>
+    <div id="grasp_loading" style="position: absolute; left: 50%; top: 45%;"></div>
+    <canvas id="webgl_grasp" style="height: 50%; width: 50%;"></canvas>
+  </div>
+  <p style="margin: 0 1.5em; font-size: 0.8em; text-align:justify;">Note: Click the select dropdown to select a object and a pre-sampled grasp for result visualization. Drag to move your view around.</p>
+</div>
+</div>
+
+
 
 <script type="module">
 
